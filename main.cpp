@@ -39,9 +39,7 @@ int main() {
 	while (!glfwWindowShouldClose(window)) {
 		glfwPollEvents();
 
-		
-
-		HRESULT hr = renderer.mSwapChain->Present(0, 0);
+		renderer.render();
 
 		std::this_thread::sleep_for(
 			std::chrono::milliseconds(5)
